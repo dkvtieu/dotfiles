@@ -1,3 +1,5 @@
+" Set encoding for rendering unicode characters
+    :set encoding=utf-8
 " Mapping leader character to the spacebar
     let mapleader = " "
 
