@@ -6,6 +6,9 @@
 " Setting both 'number' and 'relativenumber' enables hybrid line numbers
     :set number relativenumber
 
+" Turning on ruler for cursor position
+    :set ruler
+
 " Switch between line number modes automatically.
     :augroup numbertoggle
     :  autocmd!
