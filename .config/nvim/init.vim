@@ -1,5 +1,19 @@
+if ! filereadable(system('echo -n "$HOME/.config/nvim/autoload/plug.vim"'))
+	echo "Downloading junegunn/vim-plug to manage plugins..."
+	silent !mkdir -p $HOME/.config/nvim/autoload/
+	silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" > $HOME/.config/nvim/autoload/plug.vim
+	autocmd VimEnter * PlugInstall
+endif
+
+call plug#begin('$HOME/.config/nvim/plugged')
+Plug 'tpope/vim-surround'
+Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-commentary'
+call plug#end()
+
 " Set encoding for rendering unicode characters
     :set encoding=utf-8
+
 " Mapping leader character to the spacebar
     let mapleader = " "
 
