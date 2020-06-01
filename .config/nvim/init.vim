@@ -15,6 +15,10 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'bkad/camelcasemotion'
+Plug 'scrooloose/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'ryanoasis/vim-devicons'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
@@ -171,8 +175,30 @@ call plug#end()
 
     autocmd BufWritePre * :call TrimWhitespace()
 
-" Open default file tree and resize pane (project explorer)
-    nnoremap <leader>pe :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-
 " Disable timeout for leader input, to give more time to enter command
     set notimeout
+
+" camelcasemotion
+    let g:camelcasemotion_key = '<leader>'
+
+" NERDTree
+    nmap <leader>pe :NERDTreeToggle<CR>
+    let g:NERDTreeIgnore = ['^node_modules$']
+
+    " sync open file with NERDTree
+    " Check if NERDTree is open or active
+    function! IsNERDTreeOpen()
+      return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
+    endfunction
+
+    " Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
+    " file, and we're not in vimdiff
+    function! SyncTree()
+      if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
+        NERDTreeFind
+        wincmd p
+      endif
+    endfunction
+
+    " Highlight currently open buffer in NERDTree
+    autocmd BufEnter * call SyncTree()
