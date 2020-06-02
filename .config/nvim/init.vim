@@ -7,6 +7,7 @@ endif
 
 call plug#begin('$HOME/.config/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-fugitive'
 Plug 'mbbill/undotree'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
@@ -105,9 +106,11 @@ call plug#end()
 " UndoTree
     nnoremap <leader>u :UndotreeShow<cr>
 
-" Vertical window resizing
-    nnoremap <Leader>+ :vertical resize +5<CR>
+" Window resizing
+    nnoremap <Leader>= :vertical resize +5<CR>
     nnoremap <Leader>- :vertical resize -5<CR>
+    nnoremap <Leader>+ :resize +5<CR>
+    nnoremap <Leader>_ :resize -5<CR>
 
 " FZF search (project find)
     nnoremap <leader>pF :Files<CR>
