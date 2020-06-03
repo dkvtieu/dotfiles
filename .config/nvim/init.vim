@@ -216,3 +216,7 @@ call plug#end()
     endfunction
 
     nmap <leader>pe :call ToggleNerdTree()<CR>
+
+" Faster buffer selection / switching
+    set wildcharm=<tab>
+    nnoremap <leader><tab> :buffer<space><tab>
