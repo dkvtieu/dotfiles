@@ -30,7 +30,7 @@ call plug#end()
 
 " Color schemes
     colorscheme gruvbox
-    set bg=light
+    set bg=dark
 
 " Do not retain swap files or backups. Instead retain undo history
     set noswapfile
