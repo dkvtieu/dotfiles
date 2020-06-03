@@ -227,3 +227,7 @@ call plug#end()
         autocmd Syntax * syntax sync minlines=2000
     augroup END
 
+" Vimdiff mappings
+    nmap <leader>gf :diffget //2<CR>
+    nmap <leader>gj :diffget //3<CR>
+
