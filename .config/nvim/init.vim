@@ -218,8 +218,8 @@ call plug#end()
     nmap <leader>pe :call ToggleNerdTree()<CR>
 
 " Faster buffer selection / switching
-    set wildcharm=<tab>
-    nnoremap <leader><tab> :buffer<space><tab>
+    set wildcharm=<Tab>
+    nnoremap <Leader><Tab> :buffer<Space><Tab>
 
 " Improve scroll performance on some file types
     augroup syntaxSyncMinLines
