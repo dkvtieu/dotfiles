@@ -220,3 +220,10 @@ call plug#end()
 " Faster buffer selection / switching
     set wildcharm=<tab>
     nnoremap <leader><tab> :buffer<space><tab>
+
+" Improve scroll performance on some file types
+    augroup syntaxSyncMinLines
+        autocmd!
+        autocmd Syntax * syntax sync minlines=2000
+    augroup END
+
