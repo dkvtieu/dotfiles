@@ -21,6 +21,9 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
+Plug 'wellle/targets.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-grepper'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
@@ -207,4 +210,44 @@ call plug#end()
 " Vimdiff mappings
     nmap <leader>gf :diffget //2<CR>
     nmap <leader>gj :diffget //3<CR>
+
+" Auto delete vim-fugitive buffers when quitting
+    autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" GitGutter mappings
+    nmap <Leader>gh <Plug>(GitGutterPreviewHunk)
+    nmap <Leader>g+ <Plug>(GitGutterStageHunk)
+    nmap <Leader>g- <Plug>(GitGutterUndoHunk)
+
+" vim-airline
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+" Enable global replacement (i.e. no need to do /g with every :substitute)
+" WARNING: This may break some plugins
+    set gdefault
+
+" vim-grepper
+    let g:grepper = {}
+    let g:grepper.tools = ["rg"]
+    runtime autoload/grepper.vim
+    let g:grepper.jump = 1
+    nnoremap <Leader>pf :GrepperRg<Space>
+    nnoremap gs :Grepper -cword -noprompt<CR>
+    xmap gs <Plug>(GrepperOperator)
+
+" Global find and replace
+    nnoremap <Leader>S
+      \ :let @s='\<'.expand('<cword>').'\>'<CR>
+      \ :Grepper -cword -noprompt<CR>
+      \ <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+      \ :cfdo %s/<C-r>s// \| update
+    xmap <Leader>S
+      \ "sy \|
+      \ :GrepperRg <C-r>s<CR>
+      \ <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+      \ :cfdo %s/<C-r>s// \| update
+
+" Substitute preview
+    set inccommand=nosplit
 
