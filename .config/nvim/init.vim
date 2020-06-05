@@ -113,8 +113,8 @@ call plug#end()
     nnoremap <Leader>_ :resize -5<CR>
 
 " FZF search (project find)
-    nnoremap <leader>pF :Files<CR>
-    nnoremap <leader>pf :GFiles<CR>
+    nnoremap <leader>pP :Files<CR>
+    nnoremap <leader>pp :GFiles<CR>
 
 " Move lines in visual mode
     vnoremap J :m '>+1<CR>gv=gv
