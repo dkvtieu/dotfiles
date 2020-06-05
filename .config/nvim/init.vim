@@ -237,12 +237,12 @@ call plug#end()
     xmap gs <Plug>(GrepperOperator)
 
 " Global find and replace
-    nnoremap <Leader>S
+    nnoremap <Leader>r
       \ :let @s='\<'.expand('<cword>').'\>'<CR>
       \ :Grepper -cword -noprompt<CR>
       \ <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
       \ :cfdo %s/<C-r>s// \| update
-    xmap <Leader>S
+    xmap <Leader>r
       \ "sy \|
       \ :GrepperRg <C-r>s<CR>
       \ <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
