@@ -129,9 +129,9 @@ call plug#end()
     nmap <silent> gi <Plug>(coc-implementation)
     nmap <silent> gr <Plug>(coc-references)
 
-" Use `[g` and `]g` to navigate diagnostics
-    nmap <silent> g[ <Plug>(coc-diagnostic-prev)
-    nmap <silent> g] <Plug>(coc-diagnostic-next)
+" To navigate coc-diagnostics
+    nmap <silent> [g <Plug>(coc-diagnostic-prev)
+    nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Use tab for trigger completion with characters ahead and navigate.
     function! s:check_back_space() abort
