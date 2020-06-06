@@ -59,16 +59,6 @@ call plug#end()
 " Use spaces for indentation (4 spaces for an indentation in normal & insert)
     set expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
-" Shortcut to rapidly toggle `set list`
-    nmap <leader>l :set list!<CR>
-
-" Use the same symbols as TextMate for tabstops and EOLs
-    set listchars=tab:▸\ ,eol:¬
-
-" Invisible character colors
-    highlight NonText guifg=#4a4a59
-    highlight SpecialKey guifg=#4a4a59
-
 " Reload or edit neovim config
     nnoremap <leader>vr :source $HOME/.config/nvim/init.vim<cr>
     nnoremap <leader>ve :e $HOME/.config/nvim/init.vim<cr>
