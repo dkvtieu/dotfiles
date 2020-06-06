@@ -24,6 +24,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'wellle/targets.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-grepper'
+Plug 'herringtondarkholme/yats.vim'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
