@@ -186,6 +186,7 @@ call plug#end()
     let g:NERDTreeIgnore = ['^node_modules$']
 
     nmap <leader>pe :NERDTreeToggle<CR>
+    nmap <leader>pE :NERDTreeFind<CR>
 
 " Faster buffer selection / switching
     nnoremap <Leader><Tab> :bn<CR>
