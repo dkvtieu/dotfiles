@@ -24,6 +24,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'wellle/targets.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-grepper'
+Plug 'liuchengxu/vista.vim'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
@@ -242,4 +243,9 @@ call plug#end()
 
 " Substitute preview
     set inccommand=nosplit
+
+" Vista (tagbar replacement)
+    nmap <leader>l :Vista!!<CR>
+    nmap <leader>L :Vista finder<CR>
+    let g:vista_default_executive = 'coc'
 
