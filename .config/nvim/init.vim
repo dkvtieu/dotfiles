@@ -211,7 +211,7 @@ call plug#end()
 
 " vim-airline
     let g:airline#extensions#tabline#enabled = 1
-    let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+    let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Enable global replacement (i.e. no need to do /g with every :substitute)
 " WARNING: This may break some plugins
