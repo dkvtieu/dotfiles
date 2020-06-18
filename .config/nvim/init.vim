@@ -101,10 +101,6 @@ call plug#end()
     nnoremap <leader>pP :Files<CR>
     nnoremap <leader>pp :GFiles<CR>
 
-" Move lines in visual mode
-    vnoremap J :m '>+1<CR>gv=gv
-    vnoremap K :m '<-2<CR>gv=gv
-
 " GoTo code navigation.
     nmap <silent> gd <Plug>(coc-definition)
     nmap <silent> gy <Plug>(coc-type-definition)
@@ -198,9 +194,9 @@ call plug#end()
     autocmd BufReadPost fugitive://* set bufhidden=delete
 
 " GitGutter mappings
-    nmap <Leader>gh <Plug>(GitGutterPreviewHunk)
-    nmap <Leader>g+ <Plug>(GitGutterStageHunk)
-    nmap <Leader>g- <Plug>(GitGutterUndoHunk)
+    nmap <silent> gh <Plug>(GitGutterPreviewHunk)
+    nmap <silent> g+ <Plug>(GitGutterStageHunk)
+    nmap <silent> g- <Plug>(GitGutterUndoHunk)
 
 " vim-airline
     let g:airline#extensions#tabline#enabled = 1
