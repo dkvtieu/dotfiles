@@ -10,7 +10,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'bkad/camelcasemotion'
-Plug 'scrooloose/nerdtree'
 Plug 'wellle/targets.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-grepper'
@@ -167,14 +166,8 @@ call plug#end()
 " camelcasemotion
     let g:camelcasemotion_key = '<leader>'
 
-" NERDTree
-    let NERDTreeQuitOnOpen = 1
-    let NERDTreeMinimalUI = 1
-    let NERDTreeDirArrows = 1
-    let g:NERDTreeIgnore = ['^node_modules$']
-
-    nmap <leader>pe :NERDTreeToggle<CR>
-    nmap <leader>pE :NERDTreeFind<CR>
+" coc-explorer
+    nmap <space>pe :CocCommand explorer<CR>
 
 " Faster buffer selection / switching
     nnoremap <Leader><Tab> :bn<CR>

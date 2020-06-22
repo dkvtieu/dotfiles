@@ -1,10 +1,16 @@
 {
-    "coc.preferences.formatOnSaveFiletypes": [
-        "json",
-        "javascript",
-        "typescript",
-        "typescriptreact",
-        "javascriptreact",
-        "typescript.tsx"
-    ]
+  "coc.preferences.formatOnSaveFiletypes": [
+    "json",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
+    "typescript.tsx"
+  ],
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.width": 30,
+  "explorer.keyMappings": {
+    "v": "open:vsplit"
+  }
 }
