@@ -18,6 +18,9 @@ Plug 'herringtondarkholme/yats.vim'
 Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
+" Allow mouse interaction with vim while in a tmux session
+    set mouse=a
+
 " Turn on default syntax highlighting if available
     set encoding=UTF-8
     syntax on
