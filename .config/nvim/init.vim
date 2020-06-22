@@ -224,7 +224,7 @@ call plug#end()
     set inccommand=nosplit
 
 " Vista (tagbar replacement)
-    nmap <leader>l :Vista!!<CR>
-    nmap <leader>L :Vista finder<CR>
+    nmap <leader>l :Vista finder<CR>
+    nmap <leader>L :Vista!!<CR>
     let g:vista_default_executive = 'coc'
 
