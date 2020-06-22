@@ -205,8 +205,8 @@ call plug#end()
     runtime autoload/grepper.vim
     let g:grepper.jump = 1
     nnoremap <Leader>pf :GrepperRg<Space>
-    nnoremap gs :Grepper -cword -noprompt<CR>
-    xmap gs <Plug>(GrepperOperator)
+    nnoremap <Leader>ps :Grepper -cword -noprompt<CR>
+    xmap <Leader>ps <Plug>(GrepperOperator)
 
 " Global find and replace
     nnoremap <Leader>r
