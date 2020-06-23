@@ -207,7 +207,7 @@ call plug#end()
     let g:grepper.tools = ["rg"]
     runtime autoload/grepper.vim
     let g:grepper.jump = 1
-    nnoremap <Leader>pf :GrepperRg<Space>
+    nnoremap <Leader>pf :Rg<CR>
     nnoremap <Leader>ps :Grepper -cword -noprompt<CR>
     xmap <Leader>ps <Plug>(GrepperOperator)
 
