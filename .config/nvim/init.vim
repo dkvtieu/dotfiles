@@ -15,8 +15,11 @@ Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-grepper'
 Plug 'liuchengxu/vista.vim'
 Plug 'herringtondarkholme/yats.vim'
-Plug 'gruvbox-community/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 call plug#end()
+
+" Do not show vim mode, instead rely on vim-airline
+    set noshowmode
 
 " Allow mouse interaction with vim while in a tmux session
     set mouse=a
@@ -26,8 +29,7 @@ call plug#end()
     syntax on
 
 " Color schemes
-    colorscheme gruvbox
-    set bg=dark
+    colorscheme dracula
 
 " Do not retain swap files or backups. Instead retain undo history
     set noswapfile
