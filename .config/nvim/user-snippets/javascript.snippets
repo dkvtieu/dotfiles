@@ -1,0 +1,36 @@
+snippet cl "console.log()" b
+console.log(${1:message});
+endsnippet
+
+snippet cll "console.log() ++" b
+console.log("--------------------");
+console.log(${1:message});
+console.log("--------------------");
+endsnippet
+
+snippet gc "grouping comment" b
+/* ---------------------------
+ *      ${1:Group}
+ * --------------------------- */
+endsnippet
+
+snippet tfc "tsx: react function component" b
+import React from 'react';
+
+type $1Props = {};
+
+function ${1:MyComponent}({}: $1Props): $2 {
+	return (
+		<></>
+	)
+}
+export default $1;
+endsnippet
+
+snippet trycatch "try catch block" b
+try {
+	$1
+} catch(error) {
+
+}
+endsnippet

@@ -7,6 +7,12 @@
     "javascriptreact",
     "typescript.tsx"
   ],
+  "snippets.extends": {
+    "javascriptreact": ["javascript"],
+    "typescriptreact": ["javascript"],
+    "typescript": ["javascript"]
+  },
+  "snippets.userSnippetsDirectory": "$HOME/.config/nvim/user-snippets",
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.width": 30,
