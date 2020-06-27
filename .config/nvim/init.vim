@@ -16,6 +16,7 @@ Plug 'mhinz/vim-grepper'
 Plug 'liuchengxu/vista.vim'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'joaohkfaria/vim-jest-snippets'
 call plug#end()
 
 " Do not show vim mode, instead rely on vim-airline
