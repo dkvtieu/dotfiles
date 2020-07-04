@@ -253,7 +253,7 @@ let g:coc_global_extensions = [
             \ },
             \ 'tabline': {
             \   'left': [ ['buffers'] ],
-            \   'right': [ ['close'] ]
+            \   'right': [ [] ]
             \ },
             \ 'component_expand': {
             \   'buffers': 'lightline#bufferline#buffers'
