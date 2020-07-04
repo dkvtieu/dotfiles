@@ -1,0 +1,7 @@
+export TERMINAL="alacritty"
+export TERM="alacritty"
+export EDITOR="nvim"
+export GUI_EDITOR="nvim"
+export VISUAL="nvim"
+export BROWSER="firefox"
+export WM="bspwm"
