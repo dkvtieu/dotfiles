@@ -6,7 +6,10 @@ cp -r --parents .config/nvim ~/
 
 ### --- Tmux --- ###
 
+# NOTE: Remember to install plugins after tmux session is started
+# See https://github.com/tmux-plugins/tpm#installing-plugins
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 cp .tmux.conf ~/.tmux.conf
 
 ### --- ZSH & Oh My Zsh --- ###
