@@ -1,4 +1,6 @@
 ### --- Oh My Zsh --- ###
+#
+export NVM_LAZY_LOAD=true
 
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -26,6 +28,7 @@ autoload -U promptinit; promptinit
 prompt pure
 
 ### --- User configuration --- ###
+
 
 # Disable marking untracked files under VCS as dirty
 DISABLE_UNTRACKED_FILES_DIRTY="true"
