@@ -183,6 +183,12 @@ let g:coc_global_extensions = [
       endif
     endfunction
 
+" coc-explorer
+    nmap <space>pe :CocCommand explorer<CR>
+
+" Global find and replace
+    nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+
 " Execute macro over visual selection block
     xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
@@ -201,12 +207,8 @@ let g:coc_global_extensions = [
 
     autocmd BufWritePre * :call TrimWhitespace()
 
-
 " camelcasemotion
     let g:camelcasemotion_key = '<leader>'
-
-" coc-explorer
-    nmap <space>pe :CocCommand explorer<CR>
 
 " Faster buffer selection / switching
     nnoremap <Leader><Tab> :bn<CR>
@@ -219,12 +221,11 @@ let g:coc_global_extensions = [
     augroup END
 
 " Vimdiff mappings
-    nmap <leader>gf :diffget //2<CR>
-    nmap <leader>gj :diffget //3<CR>
+    nmap <leader>g[ :diffget //2<CR>
+    nmap <leader>g] :diffget //3<CR>
 
 " Auto delete vim-fugitive buffers when quitting
     autocmd BufReadPost fugitive://* set bufhidden=delete
-
 
 " GitGutter mappings
     nmap <silent> gh <Plug>(GitGutterPreviewHunk)
@@ -274,22 +275,23 @@ let g:coc_global_extensions = [
     let g:grepper.tools = ["rg"]
     runtime autoload/grepper.vim
     let g:grepper.jump = 1
+
     nnoremap <Leader>pf :Rg<CR>
-    nnoremap <Leader>ps :Grepper -cword -noprompt<CR>
-    xmap <Leader>ps <Plug>(GrepperOperator)
+    nnoremap <Leader>psw :Grepper -cword -noprompt<CR>
+    xmap <Leader>pss <Plug>(GrepperOperator)
 
+" DEPRECATED: use coc-search instead
 " Global find and replace
-    nnoremap <Leader>r
-      \ :let @s='\<'.expand('<cword>').'\>'<CR>
-      \ :Grepper -cword -noprompt<CR>
-      \ <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-      \ :cfdo %s/<C-r>s// \| update
-    xmap <Leader>r
-      \ "sy \|
-      \ :GrepperRg <C-r>s<CR>
-      \ <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
-      \ :cfdo %s/<C-r>s// \| update
-
+    " nnoremap <Leader>r
+    "   \ :let @s='\<'.expand('<cword>').'\>'<CR>
+    "   \ :Grepper -cword -noprompt<CR>
+    "   \ <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+    "   \ :cfdo %s/<C-r>s// \| update
+    " xmap <Leader>r
+    "   \ "sy \|
+    "   \ :GrepperRg <C-r>s<CR>
+    "   \ <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+    "   \ :cfdo %s/<C-r>s// \| update
 
 " Vista (tagbar replacement)
     nmap <leader>l :Vista finder<CR>
