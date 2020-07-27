@@ -183,8 +183,6 @@ let g:coc_global_extensions = [
       endif
     endfunction
 
-" coc-explorer
-    nmap <space>pe :CocCommand explorer<CR>
 
 " Global find and replace
     nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
@@ -209,6 +207,9 @@ let g:coc_global_extensions = [
 
 " camelcasemotion
     let g:camelcasemotion_key = '<leader>'
+
+" coc-explorer
+    nmap <space>pe :CocCommand explorer<CR>
 
 " Faster buffer selection / switching
     nnoremap <Leader><Tab> :bn<CR>
