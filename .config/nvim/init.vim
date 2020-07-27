@@ -183,10 +183,6 @@ let g:coc_global_extensions = [
       endif
     endfunction
 
-
-" Global find and replace
-    nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
-
 " Execute macro over visual selection block
     xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
@@ -281,7 +277,6 @@ let g:coc_global_extensions = [
     nnoremap <Leader>psw :Grepper -cword -noprompt<CR>
     xmap <Leader>pss <Plug>(GrepperOperator)
 
-" DEPRECATED: use coc-search instead
 " Global find and replace
     " nnoremap <Leader>r
     "   \ :let @s='\<'.expand('<cword>').'\>'<CR>
@@ -293,6 +288,9 @@ let g:coc_global_extensions = [
     "   \ :GrepperRg <C-r>s<CR>
     "   \ <Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
     "   \ :cfdo %s/<C-r>s// \| update
+
+    " Testing coc-search instead
+    nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Vista (tagbar replacement)
     nmap <leader>l :Vista finder<CR>
