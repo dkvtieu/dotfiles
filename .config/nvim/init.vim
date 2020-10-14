@@ -26,6 +26,7 @@ Plug 'liuchengxu/vista.vim'
 Plug 'herringtondarkholme/yats.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'joaohkfaria/vim-jest-snippets'
+Plug 'ap/vim-css-color'
 call plug#end()
 
 " Mapping leader character to the spacebar
