@@ -301,3 +301,5 @@ let g:coc_global_extensions = [
     nmap <leader>L :Vista!!<CR>
     let g:vista_default_executive = 'coc'
 
+" Auto close html-like tags
+    inoremap <buffer> <C-s> <esc>yiwi<lt><esc>ea></><esc>hpF>i
