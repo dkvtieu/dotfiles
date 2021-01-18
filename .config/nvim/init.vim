@@ -130,8 +130,11 @@ call plug#end()
     nnoremap <leader>pP :Files<CR>
     nnoremap <leader>pp :GFiles<CR>
 
-    let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-    let $FZF_DEFAULT_OPTS = '--reverse'
+    let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8, 'border': 'rounded' } }
+    let $FZF_DEFAULT_OPTS = "--reverse --inline-info --border --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+
+    let g:fzf_colors =
+                \ { 'border':  ['fg', 'Comment'] }
 
 " coc
 let g:coc_global_extensions = [
@@ -302,4 +305,4 @@ let g:coc_global_extensions = [
     let g:vista_default_executive = 'coc'
 
 " Auto close html-like tags
-    inoremap <buffer> <C-s> <esc>yiwi<lt><esc>ea></><esc>hpF>i
+    inoremap <buffer> <C-s> <esc>yiwi<lt><esc>ea></><esc>hpF>a
