@@ -1,0 +1,8 @@
+alias vim=nvim
+alias lvim=$HOME/.local/bin/lvim
+alias l="ls -al"
+alias screenshot="maim $HOME/Pictures/screenshots/$(date +%F:%T).png"
+alias screenshotclipboard="maim -s | xclip -selection clipboard -t image/png"
+alias cp="cp -i"                                                # Confirm before overwriting something
+alias df='df -h'                                                # Human-readable sizes
+alias free='free -m'                                            # Show sizes in MB

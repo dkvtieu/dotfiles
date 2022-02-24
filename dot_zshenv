@@ -1,0 +1,6 @@
+export TERMINAL="xterm-kitty"
+export TERM="xterm-kitty"
+export EDITOR="nvim"
+export GUI_EDITOR="nvim"
+export VISUAL="nvim"
+. "$HOME/.cargo/env"
