@@ -59,6 +59,7 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 	use("kevinhwang91/nvim-bqf")
 	use("tpope/vim-surround")
+	use("danymat/neogen")
 
 	-- Colorschemes
 	use("folke/tokyonight.nvim")

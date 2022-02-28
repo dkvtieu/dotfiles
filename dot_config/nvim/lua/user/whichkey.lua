@@ -130,6 +130,7 @@ local mappings = {
 			"<cmd>lua require('telescope.builtin').lsp_code_actions(require('telescope.themes').get_cursor())<cr>",
 			"Code Action",
 		},
+		A = { "<cmd>lua require('neogen').generate()<cr>", "Generate Annotation" },
 		d = {
 			"<cmd>Telescope lsp_document_diagnostics<cr>",
 			"Document Diagnostics",
