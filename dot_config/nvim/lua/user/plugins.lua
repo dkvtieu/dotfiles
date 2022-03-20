@@ -60,6 +60,7 @@ return packer.startup(function(use)
 	use("kevinhwang91/nvim-bqf")
 	use("tpope/vim-surround")
 	use("danymat/neogen")
+	use("bkad/camelcasemotion")
 
 	-- Colorschemes
 	use("folke/tokyonight.nvim")
