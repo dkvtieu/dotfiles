@@ -31,6 +31,7 @@ end
 
 -- Have packer use a popup window
 packer.init({
+	snapshot = "2022-06-24",
 	display = {
 		open_fn = function()
 			return require("packer.util").float({ border = "rounded" })
@@ -97,6 +98,7 @@ return packer.startup(function(use)
 	-- Git
 	use("lewis6991/gitsigns.nvim")
 	use("tpope/vim-fugitive")
+	use("kdheepak/lazygit.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
