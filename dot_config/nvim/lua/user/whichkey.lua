@@ -129,12 +129,8 @@ local mappings = {
         },
         A = { "<cmd>lua require('neogen').generate()<cr>", "Generate Annotation" },
         d = {
-            "<cmd>Telescope lsp_document_diagnostics<cr>",
-            "Document Diagnostics",
-        },
-        w = {
-            "<cmd>Telescope lsp_workspace_diagnostics<cr>",
-            "Workspace Diagnostics",
+            "<cmd>Telescope diagnostics<cr>",
+            "Diagnostics List",
         },
         f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
         i = { "<cmd>LspInfo<cr>", "Info" },
