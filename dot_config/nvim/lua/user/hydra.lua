@@ -55,4 +55,3 @@ hydra({
         { "<Esc>", nil, { exit = true, desc = false } },
     },
 })
-
