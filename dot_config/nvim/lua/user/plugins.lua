@@ -65,6 +65,7 @@ return packer.startup(function(use)
     use("ggandor/leap.nvim")
     use("mrjones2014/smart-splits.nvim")
     use("anuvyklack/hydra.nvim")
+    use("famiu/bufdelete.nvim")
 
     -- Colorschemes
     use("folke/tokyonight.nvim")
@@ -109,3 +110,4 @@ return packer.startup(function(use)
         require("packer").sync()
     end
 end)
+

@@ -87,7 +87,7 @@ local mappings = {
         "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false, hidden = true})<cr>",
         "Find files",
     },
-    ["c"] = { ":bd<CR>", "Close Buffer" },
+    ["c"] = { ":Bdelete<CR>", "Close Buffer" },
 
     p = {
         name = "Packer",
@@ -193,3 +193,4 @@ local mappings = {
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
+
