@@ -16,6 +16,7 @@ ls.config.set_config({
     ext_base_prio = 300,
     -- minimal increase in priority.
     ext_prio_increase = 1,
+    delete_check_events = "TextChanged",
 })
 
 ls.add_snippets("all", {
@@ -40,3 +41,4 @@ ls.add_snippets("all", {
         })
     ),
 })
+
