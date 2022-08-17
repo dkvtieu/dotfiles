@@ -38,3 +38,6 @@ source $HOME/.aliases
 [[ $TMUX != "" ]] && export TERM="screen-256color"
 
 eval "$(fnm env --use-on-cd)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
