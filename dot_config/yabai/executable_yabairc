@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-
 # For macOS Big Sur
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
@@ -28,10 +27,10 @@ yabai -m config mouse_drop_action            swap
 
 # general space settings
 yabai -m config layout                       bsp
-yabai -m config top_padding                  12
-yabai -m config bottom_padding               12
-yabai -m config left_padding                 12
-yabai -m config right_padding                12
+yabai -m config top_padding                  06
+yabai -m config bottom_padding               06
+yabai -m config left_padding                 06
+yabai -m config right_padding                06
 yabai -m config window_gap                   06
 
 echo "yabai configuration loaded.."
