@@ -41,3 +41,7 @@ eval "$(fnm env --use-on-cd)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+# bit
+export PATH="$PATH:/Users/dkvtieu/bin"
+# bit end

@@ -21,7 +21,7 @@ nvim_tree.setup({
 	},
 	open_on_tab = false,
 	hijack_cursor = false,
-	update_cwd = true,
+	update_cwd = false,
 	update_to_buf_dir = {
 		enable = true,
 		auto_open = true,
@@ -64,6 +64,7 @@ nvim_tree.setup({
 			list = {
 				{ key = { "l", "<CR>", "o" }, cb = tree_cb("edit") },
 				{ key = "h", cb = tree_cb("close_node") },
+				{ key = "H", action = "collapse_all" },
 				{ key = "v", cb = tree_cb("vsplit") },
 			},
 		},
