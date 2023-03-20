@@ -12,7 +12,6 @@ return {
     end,
     opts = {
       filesystem = {
-        bind_to_cwd = false,
         follow_current_file = true,
       },
       window = {

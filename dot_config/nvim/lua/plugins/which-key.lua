@@ -83,7 +83,10 @@ return {
       local mappings = {
         ["a"] = { "<cmd>Alpha<CR>", "Alpha (homescreen)" },
         ["e"] = { "<cmd>Neotree toggle<CR>", "Explorer" },
-        ["E"] = { "<cmd>lua require('neo-tree.command').execute({ toggle = true, dir = vim.loop.cwd() })<CR>", "Explorer (Root Dir)" },
+        ["E"] = {
+          "<cmd>Neotree reveal_force_cwd<CR>",
+          "Explorer (Change current working directory)",
+        },
         ["q"] = { "<cmd>qa<CR>", "Quit" },
         ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
         ["f"] = {
