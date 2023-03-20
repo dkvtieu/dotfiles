@@ -1,5 +1,12 @@
 return {
   {
+    "ray-x/lsp_signature.nvim",
+    event = { "BufEnter" },
+    config = function()
+      require("lsp_signature").setup({})
+    end,
+  },
+  {
     "VonHeikemen/lsp-zero.nvim",
     branch = "v2.x",
     dependencies = {
