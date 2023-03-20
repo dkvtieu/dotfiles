@@ -44,4 +44,7 @@ eval "$(fnm env --use-on-cd)"
 
 # bit
 export PATH="$PATH:/Users/dkvtieu/bin"
+
+export PATH="$HOME/.local/bin:$PATH"
 # bit end
+export PATH="/Users/dkvtieu/Library/Python/3.9/bin:$PATH"
