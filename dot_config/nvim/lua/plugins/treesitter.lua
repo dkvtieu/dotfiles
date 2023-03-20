@@ -27,8 +27,11 @@ return {
     },
     ---@type TSConfig
     opts = {
-      highlight = { enable = true },
-      indent = { enable = true, disable = { "python" } },
+      highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+      },
+      indent = { enable = false, disable = { "python" } },
       context_commentstring = { enable = true, enable_autocmd = false },
       autotag = { enable = true },
       ensure_installed = {
