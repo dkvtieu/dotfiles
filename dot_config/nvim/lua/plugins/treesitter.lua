@@ -1,6 +1,7 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    commit = "54a9ca47",
     build = ":TSUpdate",
     event = { "BufReadPost", "BufNewFile" },
     dependencies = {
@@ -34,6 +35,7 @@ return {
       indent = { enable = false, disable = { "python" } },
       context_commentstring = { enable = true, enable_autocmd = false },
       autotag = { enable = true },
+      autopairs = { enable = true },
       ensure_installed = {
         "bash",
         "c",

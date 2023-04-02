@@ -22,6 +22,11 @@ return {
       { "hrsh7th/nvim-cmp" }, -- Required
       { "hrsh7th/cmp-nvim-lsp" }, -- Required
       { "L3MON4D3/LuaSnip" }, -- Required
+
+      { "hrsh7th/cmp-buffer" }, -- Optional
+      { "hrsh7th/cmp-path" }, -- Optional
+      { "saadparwaiz1/cmp_luasnip" }, -- Optional
+      { "hrsh7th/cmp-nvim-lua" }, -- Optional
     },
     config = function()
       require("neodev").setup({})
@@ -36,18 +41,60 @@ return {
         bind("n", "<leader>r", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
       end)
 
+      local luasnip = require("luasnip")
+
+      local s = luasnip.snippet
+      local i = luasnip.insert_node
+      local fmt = require("luasnip.extras.fmt").fmt
+
+      luasnip.add_snippets("all", {
+        s(
+          { name = "group comment", trig = "gc" },
+          fmt(
+            [[
+        /* ---------------------------
+         *     {1}
+         * --------------------------- */
+    ]],
+            {
+              i(1, "Group"),
+            }
+          )
+        ),
+      })
+
       local cmp = require("cmp")
 
-      require("cmp").setup({
+      cmp.setup({
         window = {
           documentation = cmp.config.window.bordered(),
         },
         mapping = {
-          ["<CR>"] = cmp.mapping.confirm(),
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+          ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
+        },
+        sources = {
+          { name = "path" },
+          { name = "nvim_lsp" },
+          {
+            name = "buffer",
+            keyword_length = 3,
+            option = {
+              get_bufnrs = function()
+                return vim.api.nvim_list_bufs()
+              end,
+            },
+          },
+          { name = "luasnip", keyword_length = 2 },
         },
       })
 
       lsp.setup()
+
+      local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+      -- cmp integration
+      cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 
       vim.diagnostic.config({
         -- disable virtual text
