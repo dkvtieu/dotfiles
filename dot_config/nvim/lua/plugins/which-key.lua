@@ -94,6 +94,7 @@ return {
           "Find files",
         },
         ["c"] = { "<cmd>lua MiniBufremove.delete()<CR>", "Close Buffer" },
+        ["u"] = { "<cmd>Telescope undo<cr>", "Undo Tree" },
         p = {
           name = "Packer",
           c = { "<cmd>PackerCompile<CR>", "Compile" },
