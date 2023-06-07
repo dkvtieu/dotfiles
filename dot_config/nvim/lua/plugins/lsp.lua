@@ -11,22 +11,22 @@ return {
     branch = "v2.x",
     dependencies = {
       -- LSP Support
-      { "neovim/nvim-lspconfig" }, -- Required
-      { "williamboman/mason.nvim" }, -- Optional
+      { "neovim/nvim-lspconfig" },             -- Required
+      { "williamboman/mason.nvim" },           -- Optional
       { "williamboman/mason-lspconfig.nvim" }, -- Optional
       { "jay-babu/mason-null-ls.nvim" },
       { "jose-elias-alvarez/null-ls.nvim" },
       { "folke/neodev.nvim" },
 
       -- Autocompletion
-      { "hrsh7th/nvim-cmp" }, -- Required
-      { "hrsh7th/cmp-nvim-lsp" }, -- Required
-      { "L3MON4D3/LuaSnip" }, -- Required
+      { "hrsh7th/nvim-cmp" },         -- Required
+      { "hrsh7th/cmp-nvim-lsp" },     -- Required
+      { "L3MON4D3/LuaSnip" },         -- Required
 
-      { "hrsh7th/cmp-buffer" }, -- Optional
-      { "hrsh7th/cmp-path" }, -- Optional
+      { "hrsh7th/cmp-buffer" },       -- Optional
+      { "hrsh7th/cmp-path" },         -- Optional
       { "saadparwaiz1/cmp_luasnip" }, -- Optional
-      { "hrsh7th/cmp-nvim-lua" }, -- Optional
+      { "hrsh7th/cmp-nvim-lua" },     -- Optional
     },
     config = function()
       require("neodev").setup({})
@@ -70,7 +70,7 @@ return {
           documentation = cmp.config.window.bordered(),
         },
         mapping = {
-          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          ["<CR>"] = cmp.mapping.confirm(),
           ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
           ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
         },
@@ -103,9 +103,9 @@ return {
         signs = {
           active = {
             { name = "DiagnosticSignError", text = "" },
-            { name = "DiagnosticSignWarn", text = "" },
-            { name = "DiagnosticSignHint", text = "" },
-            { name = "DiagnosticSignInfo", text = "" },
+            { name = "DiagnosticSignWarn",  text = "" },
+            { name = "DiagnosticSignHint",  text = "" },
+            { name = "DiagnosticSignInfo",  text = "" },
           },
         },
         update_in_insert = true,
