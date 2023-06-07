@@ -14,4 +14,10 @@ return {
     },
   },
   { "kdheepak/lazygit.nvim" },
+  { "akinsho/git-conflict.nvim", config = true },
+  {
+    "ruifm/gitlinker.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = true,
+  },
 }
