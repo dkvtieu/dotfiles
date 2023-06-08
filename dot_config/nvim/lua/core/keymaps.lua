@@ -45,6 +45,9 @@ keymap("n", "<leader>h", ":noh<CR>", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
+-- Retain cursor position after yank
+keymap("v", "y", "ygv<esc>", opts)
+
 -- Move text up and down
 keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
