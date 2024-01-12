@@ -11,22 +11,23 @@ return {
     branch = "v2.x",
     dependencies = {
       -- LSP Support
-      { "neovim/nvim-lspconfig" },             -- Required
-      { "williamboman/mason.nvim" },           -- Optional
+      { "neovim/nvim-lspconfig" }, -- Required
+      { "williamboman/mason.nvim" }, -- Optional
       { "williamboman/mason-lspconfig.nvim" }, -- Optional
       { "jay-babu/mason-null-ls.nvim" },
       { "jose-elias-alvarez/null-ls.nvim" },
       { "folke/neodev.nvim" },
 
       -- Autocompletion
-      { "hrsh7th/nvim-cmp" },         -- Required
-      { "hrsh7th/cmp-nvim-lsp" },     -- Required
-      { "L3MON4D3/LuaSnip" },         -- Required
+      { "hrsh7th/nvim-cmp" }, -- Required
+      { "hrsh7th/cmp-nvim-lsp" }, -- Required
+      { "L3MON4D3/LuaSnip" }, -- Required
 
-      { "hrsh7th/cmp-buffer" },       -- Optional
-      { "hrsh7th/cmp-path" },         -- Optional
+      { "hrsh7th/cmp-buffer" }, -- Optional
+      { "hrsh7th/cmp-path" }, -- Optional
       { "saadparwaiz1/cmp_luasnip" }, -- Optional
-      { "hrsh7th/cmp-nvim-lua" },     -- Optional
+      { "hrsh7th/cmp-nvim-lua" }, -- Optional
+      { "rafamadriz/friendly-snippets" },
     },
     config = function()
       require("neodev").setup({})
@@ -42,6 +43,7 @@ return {
       end)
 
       local luasnip = require("luasnip")
+      require("luasnip.loaders.from_vscode").lazy_load()
 
       local s = luasnip.snippet
       local i = luasnip.insert_node
@@ -103,9 +105,9 @@ return {
         signs = {
           active = {
             { name = "DiagnosticSignError", text = "" },
-            { name = "DiagnosticSignWarn",  text = "" },
-            { name = "DiagnosticSignHint",  text = "" },
-            { name = "DiagnosticSignInfo",  text = "" },
+            { name = "DiagnosticSignWarn", text = "" },
+            { name = "DiagnosticSignHint", text = "" },
+            { name = "DiagnosticSignInfo", text = "" },
           },
         },
         update_in_insert = true,
@@ -154,7 +156,12 @@ return {
               group = augroup,
               buffer = bufnr,
               callback = function()
-                vim.lsp.buf.format({ bufnr = bufnr })
+                vim.lsp.buf.format({
+                  bufnr = bufnr,
+                  filter = function(client)
+                    return client.name ~= "tsserver"
+                  end,
+                })
               end,
             })
           end
