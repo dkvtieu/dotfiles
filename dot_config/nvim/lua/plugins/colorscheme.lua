@@ -1,9 +1,9 @@
 return {
+  { "catppuccin/nvim" },
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    config = function()
-      vim.cmd.colorscheme("catppuccin-frappe")
-    end,
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin-frappe",
+    },
   },
 }
