@@ -8,3 +8,4 @@ alias df='df -h'                                                # Human-readable
 alias free='free -m'                                            # Show sizes in MB
 alias ssh='kitty +kitten ssh'
 alias lg='lazygit'
+alias air='$(go env GOPATH)/bin/air'
