@@ -8,4 +8,14 @@ return {
   },
   { "kevinhwang91/nvim-bqf" },
   { "bkad/CamelCaseMotion" },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      scroll = {
+        animate = {
+          easing = "outCirc",
+        },
+      },
+    },
+  },
 }
